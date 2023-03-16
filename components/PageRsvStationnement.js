@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const PageRsv = (props) => {
+export default function PageRsvStationnement() {
   return (
     <View style={{flex:1,backgroundColor:"#303840"}}>
         <View  style={{flex:0.5}}>
@@ -12,18 +12,16 @@ const PageRsv = (props) => {
           <View style={{borderWidth:1,width:"40%",height:"30%"}}>
 
           </View>
-          <View>
-            <Text style={{fontWeight:"bold",right:50,color:"black",marginTop:20}}>Nom Du Parking: {props.route.params.Nom}</Text>
-            <Text style={{fontWeight:"bold",left:120,color:"black"}}>Tarif: 5000f/Heurs</Text>
-            <Text style={{fontWeight:"bold",right:50,color:"black",marginTop:20}}>Lieu Du Parking : {props.route.params.Emplacement}</Text>
+          <View style={{marginRight:170}}>
+            <Text style={{fontWeight:"bold",color:"black"}}>Nom Du Parking</Text>
+            <Text style={{fontWeight:"bold",color:"black",marginTop:20}}>Tarif: 5000f/Heurs</Text>
+            <Text style={{fontWeight:"bold",color:"black",marginTop:20}}>Lieu Du Parking</Text>
           </View>
-          <TouchableOpacity style={{backgroundColor:"#303840",width:"25%",height:"5%",borderRadius:7}} onPress={()=>props.navigation.push("Viewchoose")}>
-            <Text  style={{color:"#72A603",alignSelf:"center"}}>Reserver</Text>
+          <TouchableOpacity style={{backgroundColor:"#303840",width:"25%",height:"5%",borderRadius:7}}>
+            <Text  style={{color:"#72A603",alignSelf:"center"}}>Localisation</Text>
           </TouchableOpacity>
         </View>
       </View>
     </View>
   )
 }
-
-export default PageRsv
